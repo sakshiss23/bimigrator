@@ -7,6 +7,7 @@ import Link from "@mui/material/Link";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./footer.scss";
 
 function Copyright() {
@@ -17,7 +18,7 @@ function Copyright() {
         VaidhyaMegha
       </Link>{" "}
       {new Date().getFullYear()}
-      {"."}
+      {" | All Rights Reserved."}
     </Typography>
   );
 }
@@ -32,6 +33,13 @@ const StickyFooter = () => {
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
+          py: 1,
+          px: 1,
+          mt: "auto",
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          right: 0,
         }}
       >
         <CssBaseline />
@@ -49,7 +57,18 @@ const StickyFooter = () => {
           }}
         >
           <Container maxWidth="100vw" className="footerContainer">
-            <Typography variant="body1">username</Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <AccountCircleIcon />
+              <Typography sx={{ p: 1 }} variant="body2" color="text.secondary">
+                username
+              </Typography>
+            </Box>
             <Copyright />
             <Box className="footerIcon">
               <Link

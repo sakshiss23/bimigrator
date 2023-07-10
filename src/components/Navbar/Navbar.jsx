@@ -28,33 +28,35 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" className="navbarMain">
+    <AppBar
+      height={100}
+      position="sticky"
+      className="navbarMain"
+      color="transparent"
+      elevation={0}
+    >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
           sx={{
             justifyContent: "space-between",
-            minHeight: "20px",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Typography
-              className="name"
+              className="logoName"
               variant="h6"
               noWrap
               component="a"
               href="/"
               sx={{
                 mr: 2,
+                p: 3,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 600,
-                letterSpacing: ".15rem",
-                color: "inherit",
                 textDecoration: "none",
               }}
             >
-              BI MIGRATOR
+              VAIDHYAMEGHA
             </Typography>
 
             <Typography
@@ -64,7 +66,6 @@ function ResponsiveAppBar() {
               component="a"
               href=""
               sx={{
-                mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "monospace",
@@ -86,7 +87,13 @@ function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  <Link to={`/${page.toLowerCase()}`} className="nav-link">
+                  <Link
+                    style={{
+                      color: "#1565c0",
+                    }}
+                    to={`/${page.toLowerCase()}`}
+                    className="nav-link"
+                  >
                     {page}
                   </Link>
                 </Button>
