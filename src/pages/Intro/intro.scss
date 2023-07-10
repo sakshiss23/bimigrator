@@ -1,0 +1,11 @@
+.intro{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.introMain{
+  flex-grow: 1;
+  overflow: auto;
+}
